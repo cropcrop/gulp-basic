@@ -1,8 +1,8 @@
 {
-  "name": "honesign",
-  "version": "0.0.0",
+  "name": "gulp-basic-workflow",
+  "version": "1.0.0",
   "authors": [
-    "Luca <honeaven@gmail.com>"
+    "Luca Dimola <honeaven@gmail.com>"
   ],
   "license": "MIT",
   "private": true,

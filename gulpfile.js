@@ -1,3 +1,6 @@
+"use strict";
+
+//Require Modules
 var gulp = require('gulp')
   , sass = require('gulp-ruby-sass')
   , autoprefixer = require('gulp-autoprefixer')
@@ -8,9 +11,12 @@ var gulp = require('gulp')
   , imagemin = require('gulp-imagemin')
   , pngcrush = require('imagemin-pngcrush')
   , livereload = require('gulp-livereload')
-  , watch = require('gulp-watch');
+  , fileinclude = require('gulp-file-include')
+  , watch = require('gulp-watch')
+  , connect = require('gulp-connect');
 
 
+//Process CSS
 gulp.task('process-css', function() {
   console.log('- processing css..');
   return gulp.src('src/assets/css/*.scss')
@@ -22,6 +28,7 @@ gulp.task('process-css', function() {
     .pipe(gulp.dest('public/assets/css/'))
 });
 
+//Process JS
 gulp.task('process-js', function() {
   console.log('- processing js..');
   return gulp.src('src/assets/js/*.js')
@@ -32,6 +39,7 @@ gulp.task('process-js', function() {
     .pipe(gulp.dest('public/assets/js/'))
 });
 
+//Process IMGs
 gulp.task('process-img', function () {
   console.log('- processing img..');
   return gulp.src('src/assets/img/*')
@@ -43,8 +51,41 @@ gulp.task('process-img', function () {
     .pipe(gulp.dest('public/assets/img/'));
 });
 
-gulp.task('watch', function() {
-    console.log('- watch task..');
-    gulp.watch('src/assets/js/*.js', ['process-js'])
-    gulp.watch('src/assets/css/*.scss', ['process-css'])
+//Process Partials
+gulp.task('file-include', function() {
+  console.log('- including files..');
+  gulp.src(['src/views/index.html'])
+    .pipe(fileinclude({
+      prefix: '@@',
+      basepath: '@file'
+    }))
+    .pipe(gulp.dest('public/'))
 });
+
+//Local Server + Reload
+gulp.task('connect', function() {
+  connect.server({
+    root: ['public'],
+    livereload: true,
+    open: {
+      browser: 'Google Chrome'
+    }
+  });
+});
+
+gulp.task('reload', function() {
+  gulp.src('public/*.html')
+    .pipe(connect.reload());
+});
+
+//Watch for changes
+gulp.task('watch', function() {
+  console.log('- watch task..');
+  gulp.watch('src/assets/js/*.js', ['process-js']);
+  gulp.watch('src/assets/css/*.scss', ['process-css']);
+  gulp.watch('src/views/**', ['file-include']);
+  gulp.watch(['public/**'], ['reload']);
+});
+
+//Defaul gulp task
+gulp.task('default', ['connect', 'watch']);
