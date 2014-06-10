@@ -1,8 +1,0 @@
-body {
-  background: #aaaaaa;
-  -webkit-transition: color 2s ease-in-out;
-  transition: color 2s ease-in-out;
-  -webkit-transform: rotate(20deg);
-  -ms-transform: rotate(20deg);
-  transform: rotate(20deg);
-}
