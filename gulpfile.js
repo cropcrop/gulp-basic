@@ -13,7 +13,8 @@ var gulp = require('gulp')
   , livereload = require('gulp-livereload')
   , fileinclude = require('gulp-file-include')
   , watch = require('gulp-watch')
-  , connect = require('gulp-connect');
+  , connect = require('gulp-connect')
+  , open = require('gulp-open');
 
 
 //Process CSS
@@ -78,6 +79,12 @@ gulp.task('reload', function() {
     .pipe(connect.reload());
 });
 
+//Open browser tab
+gulp.task("open", function(){
+  gulp.src("public/index.html")
+  .pipe(open("<%file.path%>")); 
+});
+
 //Watch for changes
 gulp.task('watch', function() {
   console.log('- watch task..');
@@ -88,4 +95,4 @@ gulp.task('watch', function() {
 });
 
 //Defaul gulp task
-gulp.task('default', ['connect', 'watch']);
+gulp.task('default', ['connect', 'watch','open']);
