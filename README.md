@@ -1,4 +1,5 @@
 # Basic Gulp Workflow #
+Includes basic bootstrap template (navbar + sticky footer)
 
 ## process-js ##
 - gulp-uglify
