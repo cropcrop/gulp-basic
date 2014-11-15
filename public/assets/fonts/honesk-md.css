@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'NeueHaasGroteskDispW02XLtRegular';
+    src: url('grotesk-md.eot');
+    src: url('grotesk-md.eot') format('embedded-opentype'),
+         url('grotesk-md.woff') format('woff'),
+         url('grotesk-md.ttf') format('truetype'),
+         url('grotesk-md.svg#NeueHaasGroteskDispW02XLtRegular') format('svg');
+}

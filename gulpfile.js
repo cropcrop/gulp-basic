@@ -12,6 +12,7 @@ var gulp = require('gulp')
   , pngcrush = require('imagemin-pngcrush')
   , livereload = require('gulp-livereload')
   , fileinclude = require('gulp-file-include')
+  , minifyHTML = require('gulp-minify-html')
   , watch = require('gulp-watch')
   , connect = require('gulp-connect')
   , open = require('gulp-open');
@@ -43,7 +44,7 @@ gulp.task('process-js', function() {
 //Process IMGs
 gulp.task('process-img', function () {
   console.log('- processing img..');
-  return gulp.src('src/assets/img/*')
+  return gulp.src('src/assets/img/**')
     .pipe(imagemin({
         progressive: true,
         svgoPlugins: [{removeViewBox: false}],
@@ -52,13 +53,16 @@ gulp.task('process-img', function () {
     .pipe(gulp.dest('public/assets/img/'));
 });
 
-//Process Partials
-gulp.task('file-include', function() {
-  console.log('- including files..');
-  gulp.src(['src/views/index.html'])
+//Process HTML
+gulp.task('process-html', function() {
+  gulp.src(['src/views/*.html'])
     .pipe(fileinclude({
       prefix: '@@',
       basepath: '@file'
+    }))
+    .pipe(minifyHTML({
+      comments:true,
+      spare:true
     }))
     .pipe(gulp.dest('public/'))
 });
@@ -75,7 +79,7 @@ gulp.task('connect', function() {
 });
 
 gulp.task('reload', function() {
-  gulp.src('public/*.html')
+  gulp.src('public/**')
     .pipe(connect.reload());
 });
 
@@ -90,9 +94,9 @@ gulp.task('watch', function() {
   console.log('- watch task..');
   gulp.watch('src/assets/js/*.js', ['process-js']);
   gulp.watch('src/assets/css/*.scss', ['process-css']);
-  gulp.watch('src/views/**', ['file-include']);
+  gulp.watch('src/views/**', ['process-html']);
   gulp.watch(['public/**'], ['reload']);
 });
 
 //Defaul gulp task
-gulp.task('default', ['connect', 'watch','open']);
+gulp.task('default', ['connect', 'watch', 'open']);
