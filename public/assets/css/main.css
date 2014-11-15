@@ -33,15 +33,68 @@ canvas {
   opacity: 0.96;
 }
 
+/* Blog item */
+.blog .blog-item {
+  background: #fff;
+  margin-bottom: 30px;
+  border-bottom: 5px solid #ccc;
+  display: block;
+}
+
+.blog .blog-item .blog-content {
+  color: #7C7C7C;
+  padding: 25px 45px;
+  font-size: 13px;
+  line-height: 1.5em;
+  font-family: 'Open Sans';
+  font-weight: 400;
+}
+
+.blog .blog-item .blog-image {
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: #111;
+}
+
+.blog .blog-item img {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  -webkit-transform: scale(1.01);
+  -ms-transform: scale(1.01);
+  transform: scale(1.01);
+}
+
+.blog .blog-item:hover img {
+  -webkit-transform: scale(1.25);
+  -ms-transform: scale(1.25);
+  transform: scale(1.25);
+}
+
+.blog-content h2 a {
+  color: #2d2d2d;
+  font-size: 22px;
+  font-family: 'Raleway';
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+.blog-content p {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
 body,
 html {
-  background: #000;
+  background: #111;
   color: #fff;
   height: 100%;
 }
 
 body {
-  font-family: 'HoneskMd', 'Raleway', sans-serif;
+  font-family: 'Proxima Nova', 'Raleway', sans-serif;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   font-size: 100%;
@@ -77,7 +130,11 @@ a:active {
 }
 
 .top-md {
-  padding-top: 5%;
+  padding-top: 25px;
+}
+
+.bottom-md {
+  padding-bottom: 25px;
 }
 
 .left-md {
