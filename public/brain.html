@@ -11,18 +11,29 @@
       $('#canvas-wrap canvas').addClass('animated fadeIn');
       $('#canvas-wrap h1').addClass('animated fadeInUp');
       $('#canvas-wrap .btn-explore').addClass('animated fadeInUp');
-    }</script><script src=bower_components/bootstrap/dist/js/bootstrap.min.js></script><script src=bower_components/pace/pace.min.js></script><script src=bower_components/simple-text-rotator/jquery.simple-text-rotator.min.js></script><script src=bower_components/jquery.stellar/jquery.stellar.min.js></script><script src=bower_components/video.js/dist/video-js/video.js></script><script src=bower_components/isotope/dist/isotope.pkgd.min.js></script><script src=assets/js/main.js></script><script>$( function() {
-  
-  $('.blog').isotope({
-    itemSelector: '.item',
-    layoutMode: 'masonry',
-    masonry: {
-      columnWidth: '.item',
-    }
+    }</script><script src=bower_components/bootstrap/dist/js/bootstrap.min.js></script><script src=bower_components/pace/pace.min.js></script><script src=bower_components/simple-text-rotator/jquery.simple-text-rotator.min.js></script><script src=bower_components/jquery.stellar/jquery.stellar.min.js></script><script src=bower_components/video.js/dist/video-js/video.js></script><script src=bower_components/isotope/dist/isotope.pkgd.min.js></script><script src=assets/js/main.js></script><script>$(window).load(function(){
+    $('.blog').isotope({
+      itemSelector: '.item',
+      layoutMode: 'masonry',
+      masonry: {
+        columnWidth: '.item',
+      }
+    });
   });
-
-});
   
+  
+  
+  /* filters */
+  
+  $('#filters').on( 'click', 'li', function(event) {
+    event.preventDefault();
+    
+    $('#filters > li').removeClass('active');
+    $(this).addClass('active');
+    
+    var filterValue = $(this).attr('data-filter');
+    $('.blog').isotope({ filter: filterValue });
+  });
   
   
 /* particle background */

@@ -34,11 +34,107 @@ canvas {
 }
 
 /* Blog item */
+#filters li {
+  pointer-events: all;
+  cursor: pointer;
+}
+
+#filters li a {
+  font-size: 13.5px;
+  border-radius: 27px;
+  padding: 5px 15px;
+  margin-right: 5px;
+  text-transform: uppercase;
+  -webkit-transition: all 0.4s cubic-bezier(0.55, 0, 0.1, 1);
+  transition: all 0.4s cubic-bezier(0.55, 0, 0.1, 1);
+  font-weight: bold;
+  letter-spacing: 0.03em;
+}
+
+#filters li:hover a,
+#filters li.active a {
+  background: #eee;
+  color: #2d2d2d;
+}
+
+/* tags */
+.list-tags li {
+  font-size: 9px;
+  border-radius: 27px;
+  padding: 0px 0px;
+  margin-right: 6px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  text-transform: uppercase;
+  -webkit-transition: all 0.4s cubic-bezier(0.55, 0, 0.1, 1);
+  transition: all 0.4s cubic-bezier(0.55, 0, 0.1, 1);
+  font-weight: bold;
+  background: #999;
+  color: #fff;
+}
+
+#filters li.filter-portfolio.active a,
+#filters li.filter-portfolio:hover a,
+.list-tags li.portfolio {
+  background: #009688;
+  color: #fff;
+}
+
+#filters li.filter-blog.active a,
+#filters li.filter-blog:hover a,
+.list-tags li.blog {
+  background: #607D8B;
+  color: #fff;
+}
+
+#filters li.filter-neuroscience.active a,
+#filters li.filter-neuroscience:hover a,
+.list-tags li.neuroscience {
+  background: #E91E63;
+  color: #fff;
+}
+
+#filters li.filter-consciousness.active a,
+#filters li.filter-consciousness:hover a,
+.list-tags li.consciousness {
+  background: #9C27B0;
+  color: #fff;
+}
+
+#filters li.filter-robotics.active a,
+#filters li.filter-robotics:hover a,
+.list-tags li.robotics {
+  background: #3F51B5;
+  color: #fff;
+}
+
+#filters li.filter-math.active a,
+#filters li.filter-math:hover a,
+.list-tags li.math {
+  background: #F44336;
+  color: #fff;
+}
+
+#filters li.filter-artificial-intelligence.active a,
+#filters li.filter-artificial-intelligence:hover a,
+.list-tags li.artificial-intelligence {
+  background: #FF9800;
+  color: #fff;
+}
+
+#filters li.filter-physic.active a,
+#filters li.filter-physic:hover a,
+.list-tags li.physic {
+  background: #2196F3;
+  color: #fff;
+}
+
 .blog .blog-item {
   background: #fff;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   border-bottom: 5px solid #ccc;
   display: block;
+  pointer-events: all;
 }
 
 .blog .blog-item .blog-content {
@@ -48,42 +144,65 @@ canvas {
   line-height: 1.5em;
   font-family: 'Open Sans';
   font-weight: 400;
+  min-height: 340px;
 }
 
 .blog .blog-item .blog-image {
-  overflow: hidden;
+  width: 100%;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   background: #111;
+  overflow: hidden;
 }
 
-.blog .blog-item img {
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-  -webkit-transform: scale(1.01);
-  -ms-transform: scale(1.01);
-  transform: scale(1.01);
+.blog .blog-item .blog-image .image {
+  width: 100%;
+  height: 200px;
+  -webkit-background-size: cover !important;
+  background-size: cover !important;
+  -webkit-transition: all 0.4s cubic-bezier(0.55, 0, 0.1, 1);
+  transition: all 0.4s cubic-bezier(0.55, 0, 0.1, 1);
 }
 
-.blog .blog-item:hover img {
-  -webkit-transform: scale(1.25);
-  -ms-transform: scale(1.25);
-  transform: scale(1.25);
+.blog .blog-item:hover .blog-image .image {
+  -webkit-transform: scale(1.12);
+  -ms-transform: scale(1.12);
+  transform: scale(1.12);
+}
+
+.blog-content h2 {
+  line-height: 0.9em;
 }
 
 .blog-content h2 a {
   color: #2d2d2d;
-  font-size: 22px;
+  font-size: 20px;
   font-family: 'Raleway';
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 0.03em;
+  line-height: 1em;
 }
 
 .blog-content p {
-  padding-top: 15px;
-  padding-bottom: 15px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.blog-content .description {
+  display: block;
+  /* Fallback for non-webkit */
+  max-width: 400px;
+  height: 58.8px;
+  /* Fallback for non-webkit */
+  margin: 0 auto;
+  font-size: 14px;
+  line-height: 1.4;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 body,
@@ -133,8 +252,28 @@ a:active {
   padding-top: 25px;
 }
 
+.top-lg {
+  padding-top: 50px;
+}
+
+.top-xl {
+  padding-top: 90px;
+}
+
+.bottom-sm {
+  padding-bottom: 15px;
+}
+
 .bottom-md {
   padding-bottom: 25px;
+}
+
+.bottom-lg {
+  padding-bottom: 50px;
+}
+
+.bottom-xl {
+  padding-bottom: 90px;
 }
 
 .left-md {
@@ -316,7 +455,7 @@ a:active {
 }
 
 .container-full h1 {
-  font-size: 6.2em;
+  font-size: 4em;
   pointer-events: none;
   margin: 0;
   line-height: 1.2em;

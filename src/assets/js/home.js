@@ -1,4 +1,14 @@
 
+/* stellar */
+
+$(function () {
+  $.stellar({
+    hideDistantElements: false,
+    responsive: true,
+    horizontalScrolling: false,
+    verticalScrolling: true,
+  });
+});
 
 
 /* menu-hamburger */
