@@ -538,6 +538,11 @@ a:active {
   right: 0;
 }
 
+/* Footer */
+.footer-text {
+  font-size: 15px;
+}
+
 /* Folio */
 @media only screen and (max-width: 480px) {
   .text-xl {
