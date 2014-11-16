@@ -37,6 +37,8 @@ canvas {
 #filters li {
   pointer-events: all;
   cursor: pointer;
+  margin-top: 6px;
+  margin-bottom: 6px;
 }
 
 #filters li a {
@@ -111,7 +113,7 @@ canvas {
 #filters li.filter-math.active a,
 #filters li.filter-math:hover a,
 .list-tags li.math {
-  background: #F44336;
+  background: #8BC34A;
   color: #fff;
 }
 
@@ -126,6 +128,20 @@ canvas {
 #filters li.filter-physic:hover a,
 .list-tags li.physic {
   background: #2196F3;
+  color: #fff;
+}
+
+#filters li.filter-ted.active a,
+#filters li.filter-ted:hover a,
+.list-tags li.ted {
+  background: #F44336;
+  color: #fff;
+}
+
+#filters li.filter-design.active a,
+#filters li.filter-design:hover a,
+.list-tags li.design {
+  background: #795548;
   color: #fff;
 }
 

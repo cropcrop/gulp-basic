@@ -1,17 +1,5 @@
 
-  <script src="bower_components/jQuery/dist/jquery.min.js"></script>
-  
-
-
-  <script>
-    if(document.getElementById('canvas-wrap')) {
-      $('#canvas-wrap').prepend('<canvas id="viewport" width="' + $(window).width() + '" height="' + $(window).height() + '"></canvas>');
-      $('#canvas-wrap canvas').addClass('animated fadeIn');
-      $('#canvas-wrap h1').addClass('animated fadeInUp');
-      $('#canvas-wrap .btn-explore').addClass('animated fadeInUp');
-    }
-  </script>
-  
+  <script src="bower_components/jQuery/dist/jquery.min.js"></script>  
   <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
   <script src="bower_components/pace/pace.min.js"></script>
   <script src="bower_components/simple-text-rotator/jquery.simple-text-rotator.min.js"></script>
@@ -34,6 +22,34 @@
     });
   });
   
+  
+  
+  /*
+  //flipboard json
+   $.getJSON( "test.json", function( data ) {
+    
+      var items = [];
+          
+      $.each( data, function( key, val ) {
+        
+        var title = data[key].title,
+          sourceUrl = data[key].sourceURL,
+          title = data[key].title,
+          excerpt = data[key].excerptText;
+          //image = data[key].inlineImage.mediumURL;
+        
+        
+        items.push( "<li id='" + key + "'>" + val + "</li>" );
+        console.log( title, sourceUrl, title, excerpt );
+      });
+     
+
+      $( "<ul/>", {
+        "class": "my-new-list",
+        html: items.join( "" )
+      }).appendTo( "body" );
+    });
+  */
   
   
   /* filters */
