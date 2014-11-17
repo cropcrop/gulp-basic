@@ -18,8 +18,7 @@ if ( document.getElementById('zebrafish') ) {
 }
 
 
-/* stellar */
-
+/* stellar 
 $(function () {
   $.stellar({
     hideDistantElements: false,
@@ -27,4 +26,4 @@ $(function () {
     horizontalScrolling: false,
     verticalScrolling: true,
   });
-});
+}); */

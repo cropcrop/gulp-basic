@@ -169,6 +169,10 @@ color: #fff;
   pointer-events: all;
 }
 
+.blog .blog-item .blog-header {
+  position: relative;
+}
+
 .blog .blog-item .blog-content {
   color: #7C7C7C;
   padding: 25px 45px;
@@ -176,7 +180,7 @@ color: #fff;
   line-height: 1.5em;
   font-family: 'Open Sans';
   font-weight: 400;
-   min-height: 340px;
+   min-height: 400px;
 }
 
 .blog .blog-item .blog-image {
@@ -185,6 +189,19 @@ color: #fff;
   background: #111;
   overflow: hidden;
 }
+
+.blog .blog-item .blog-btn {
+  position: absolute;
+  bottom: -30px;
+  right: 25px;
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  background: #eee;
+  z-index: 1;
+}
+
+
 
 .blog .blog-item .blog-image .image-experiment0 {
   width: 100%;
@@ -197,6 +214,7 @@ color: #fff;
 .blog .blog-item .blog-image .image {
   width: 100%;
   height: 200px;
+  opacity: 0.9;
  
   -webkit-background-size: cover !important;
   -moz-background-size: cover !important;
@@ -208,8 +226,8 @@ color: #fff;
 
 
 .blog .blog-item:hover .blog-image .image {
-  transform: scale(1.12);
-
+  transform: scale(1.1);
+  opacity: 1;
 }
 
 
@@ -220,7 +238,7 @@ color: #fff;
 
 .blog-content h2 a {
   color: #2d2d2d;
-  font-size: 20px;
+  font-size: 19px;
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 0.03em;
@@ -480,7 +498,7 @@ a:active {
   letter-spacing: 0.05em;
 }
 .container-full h1 span {
-  font-size: 0.72em;
+  font-size: 0.7em;
   font-weight: 200;
   display: block;
   padding: 4px;
@@ -552,6 +570,17 @@ right: 0;
  .background-particle {
    display: none;
  }
+  
+  #filters {
+    margin-bottom: 15px;
+  }
+  
+  #filters li {
+    margin-top: 3px;
+    margin-bottom: 3px;
+    width: 100%;
+  }
+  
 }
 @media only screen and (min-width: 768px) {
   /* tablets and desktop */
@@ -565,10 +594,10 @@ right: 0;
 @media only screen and (max-width: 767px) and (orientation: portrait) {
   /* portrait phones */
   .container-full h1 {
-    font-size: 30px;
+    font-size: 3em;
   }
   .container-full h1 span {
-    font-size: 30px;
+    font-size: 0.7em;
     font-weight: 200;
   }
 }

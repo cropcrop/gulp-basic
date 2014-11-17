@@ -24,7 +24,7 @@ var isMobile = {
 
 /* stellar */
 jQuery(document).ready(function(){
-    if( !isMobile.any() ){
+    if( !isMobile.any() && $(document).width() > 480 ){
        $(function () {
         $.stellar({
           hideDistantElements: false,
