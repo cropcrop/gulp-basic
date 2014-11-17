@@ -6,4 +6,5 @@ $(window).load(function () {
   $('body').delay(400).css({
     'overflow': 'visible'
   });
+  $('.blog').removeClass('hidden');
 })

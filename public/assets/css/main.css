@@ -172,6 +172,14 @@ canvas {
   overflow: hidden;
 }
 
+.blog .blog-item .blog-image .image-experiment0 {
+  width: 100%;
+  height: 200px;
+  background: #0DA185;
+  padding-top: 50px;
+  text-align: center;
+}
+
 .blog .blog-item .blog-image .image {
   width: 100%;
   height: 200px;
@@ -194,7 +202,6 @@ canvas {
 .blog-content h2 a {
   color: #2d2d2d;
   font-size: 20px;
-  font-family: 'Raleway';
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 0.03em;
@@ -229,7 +236,7 @@ html {
 }
 
 body {
-  font-family: 'Proxima Nova', 'Raleway', sans-serif;
+  font-family: 'Proxima Nova', 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   font-size: 100%;
@@ -545,20 +552,8 @@ a:active {
 
 /* Folio */
 @media only screen and (max-width: 480px) {
-  .text-xl {
-    font-size: 3em;
-  }
-
-  .text-md {
-    font-size: 1.6em;
-  }
-
-  .wrap680 {
-    height: 480px !important;
-  }
-
-  .wrap820 {
-    height: 620px !important;
+  .background-particle {
+    display: none;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -573,7 +568,7 @@ a:active {
 @media only screen and (max-width: 767px) and (orientation: portrait) {
   /* portrait phones */
   .container-full h1 {
-    font-size: 40px;
+    font-size: 30px;
   }
 
   .container-full h1 span {
