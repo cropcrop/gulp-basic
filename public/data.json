@@ -1,5 +1,6 @@
 { "entries" : [
      {
+      "type" : "post",
       "title" : "First Simulated Images of Two Black Holes Colliding",
       "excerpt" : "The equations of general relativity are so fiendish that nobody has been able to work out what a collision between two black holes would look like...until now",
       "url" : "https://medium.com/the-physics-arxiv-blog/first-simulated-images-of-two-black-holes-colliding-9be9cd5b8498",
@@ -8,6 +9,7 @@
       "tags" : [ "math", "physic", "design" ]
     },
     {
+      "type" : "post",
       "title" : "A Neuroscience Correlate of Consciousness",
       "excerpt" : "Neuroskeptic goes in-depth with Srivas Chennu",
       "url" : "http://neuro.plos.org/2014/10/27/a-neuroscience-correlate-of-consciousness-neuroskeptic-talks-with-shivas-chennu-for-plos-neuro/",
@@ -16,6 +18,7 @@
       "tags" : ["neuroscience","consciousness"]
     },
     {
+      "type" : "post",
       "title" : "The fastest autonomous car on the planet",
       "excerpt" : "Audi put a big exclamation point on its self-driving technology — \"piloted driving,\" as the company calls it — with an adrenaline-filled demonstration..",
       "url" : "http://www.theverge.com/2014/10/20/7024137/watch-a-self-driving-audi-become-the-fastest-autonomous-car-on-the-planet",
@@ -24,6 +27,7 @@
       "tags" : ["robotics", "artificial-intelligence"]
     },
     {
+      "type" : "post",
       "title" : "How a computer error helped Deep Blue beat humanity's best chess player",
       "excerpt" : "When Deep Blue beat Garry Kasparov",
       "url" : "http://www.theverge.com/2014/10/24/7056493/how-a-computer-error-helped-deep-blue-beat-humanitys-best-chess-player",
@@ -32,6 +36,7 @@
       "tags" : ["math", "artificial-intelligence"]
     },
     {
+      "type" : "post",
       "title" : "Festo's SmartBird robot takes off with elegance",
       "excerpt" : "The geniuses at Festo's Bionic Learning Network are well known for their fascination with robotic animals, and their latest creation is no exception...",
       "url" : "http://www.engadget.com/2011/03/25/festos-smartbird-robot-takes-off-with-elegance-doesnt-fight-s/",
@@ -40,6 +45,7 @@
       "tags" : ["robotics", "math", "artificial-intelligence"]
     },            
     {
+      "type" : "post",
       "title" : "Henry Markram: A brain in a supercomputer",
       "excerpt" : "Henry Markram says the mysteries of the mind can be solved — soon. Mental illness, memory, perception: they're made of neurons and electric signals, and he plans to find them with a supercomputer that models all the brain's 100,000,000,000,000 synapses.",
       "url" : "http://www.ted.com/talks/henry_markram_supercomputing_the_brain_s_secrets?language=en",
@@ -48,6 +54,7 @@
       "tags" : ["neuroscience", "consciousness", "artificial-intelligence", "physic"]
     },            
     {
+      "type" : "post",
       "title" : "Antonio Damasio: The quest to understand consciousness",
       "excerpt" : "Every morning we wake up and regain consciousness — that is a marvelous fact — but what exactly is it that we regain? Neuroscientist Antonio Damasio uses this simple question to give us a glimpse into how our brains create our sense of self.",
       "url" : "http://www.ted.com/talks/antonio_damasio_the_quest_to_understand_consciousness",
@@ -56,6 +63,7 @@
       "tags" : ["ted", "neuroscience", "consciousness"]
     },            
     {
+      "type" : "post",
       "title" : "Russel Foster:Why do we sleep?",
       "excerpt" : "Russell Foster is a circadian neuroscientist: He studies the sleep cycles of the brain. And he asks: What do we know about sleep?",
       "url" : "http://www.ted.com/talks/russell_foster_why_do_we_sleep",
@@ -64,6 +72,7 @@
       "tags" : ["ted", "neuroscience"]
     },            
     {
+      "type" : "post",
       "title" : "Daniel Wolpert: The real reason for brains",
       "excerpt" : "Neuroscientist Daniel Wolpert starts from a surprising premise: the brain evolved, not to think or feel, but to control movement.",
       "url" : "http://www.ted.com/talks/daniel_wolpert_the_real_reason_for_brains",
@@ -72,12 +81,33 @@
       "tags" : ["ted", "neuroscience"]
     },            
     {
+      "type" : "post",
       "title" : "Daniel Dennet: The illusion of consciousness",
       "excerpt" : "Philosopher Dan Dennett makes a compelling argument that not only don't we understand our own consciousness, but that half the time our brains are actively fooling us.",
       "url" : "http://www.ted.com/talks/daniel_wolpert_the_real_reason_for_brains",
       "image" : "http://img.tedcdn.com/r/images.ted.com/images/ted/55f8352def783a2b3a7f0b8b135a82ac5ae0b2de_1600x1200.jpg?ll=1&quality=89&w=800",
       "date" : "Feb 2003",
       "tags" : ["ted", "neuroscience"]
+    },            
+    {
+      "type" : "experiment",
+      "experimentClass" : "image-experiment0",
+      "title" : "Experiment: Juggling CSS3 Animation",
+      "excerpt" : "juggling-inspired preloader using css3 animation.",
+      "url" : "http://www.ted.com/talks/daniel_wolpert_the_real_reason_for_brains",
+      "image" : "./assets/img/portfolio/juggling.gif",
+      "date" : "Dec 2013",
+      "tags" : ["portfolio", "experiment"]
+    },
+    {
+      "type" : "experiment",
+      "experimentClass" : "image-experiment-default",
+      "title" : "jQuery Plugin: switchStyler",
+      "excerpt" : "Add/Remove css classes when something fixed is hovering your target div(s).",
+      "url" : "http://honesign.com/jquery-switchstyler/demo/",
+      "image" : "./assets/img/portfolio/switchstyler.gif",
+      "date" : "Sep 2014",
+      "tags" : ["portfolio", "experiment"]
     }
   ]
 }

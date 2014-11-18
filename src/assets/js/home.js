@@ -22,7 +22,7 @@ var isMobile = {
 
 
 
-/* stellar */
+/* stellar *//*
 jQuery(document).ready(function(){
     if( !isMobile.any() && $(document).width() > 480 ){
        $(function () {
@@ -34,8 +34,46 @@ jQuery(document).ready(function(){
         });
       });
     }
-});
+}); */
 
+
+  
+/* particle background */
+
+particlesJS('particles-js', {
+    particles: {
+        color: '#eee',
+        shape: 'circle',
+        opacity: 1,
+        size: 2,
+        size_random: true,
+        nb: 60,
+        line_linked: {
+            enable_auto: true,
+            distance: 250,
+            color: '#eee',
+            opacity: 0.46,
+            width: 1,
+            condensed_mode: {
+                enable: false,
+                rotateX: 600,
+                rotateY: 600
+            }
+        },
+        anim: {
+            enable: true,
+            speed: 2
+        }
+    },
+    interactivity: {
+        enable: true,
+        mouse: {
+            distance: 200
+        },
+        mode: 'grab'
+    },
+    retina_detect: true
+});
 
 
 

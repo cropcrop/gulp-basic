@@ -9,8 +9,20 @@
   outline: 0;
 }
 
-html, body {
+body,
+html {
+  background: #111;
   margin: 0;
+  color: #fff;
+  height: 100%;
+}
+
+body {
+  font-family: 'Proxima Nova', 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-size: 100%;
+  display: inline;
 }
 
 canvas {
@@ -18,19 +30,22 @@ canvas {
   vertical-align: bottom;
 }
 
+a {
+  color: #ddd;
+}
+
+a:hover,
+a:focus,
+a:active {
+  color: #fff;
+  text-decoration: none;
+  -webkit-transition: color 0.6s;
+}
+
 .background-particle {
   height: 100%;
   background: #111;
   position: relative;
-}
-
-.sidebar {
-  width: 80px;
-  background: #38C2A2;
-  height: 100%;
-  position: fixed;
-  z-index: 1;
-  opacity: 0.96;
 }
 
 /* Blog item */
@@ -187,6 +202,18 @@ canvas {
   z-index: 1;
 }
 
+.blog .blog-item .blog-image .image-experiment-default {
+  width: 100%;
+  height: 200px;
+  background: #111;
+}
+
+.blog .blog-item .blog-image .image-experiment-default img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 .blog .blog-item .blog-image .image-experiment0 {
   width: 100%;
   height: 200px;
@@ -243,32 +270,6 @@ canvas {
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
-}
-
-body,
-html {
-  background: #111;
-  color: #fff;
-  height: 100%;
-}
-
-body {
-  font-family: 'Proxima Nova', 'Roboto', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  font-size: 100%;
-}
-
-a {
-  color: #ddd;
-}
-
-a:hover,
-a:focus,
-a:active {
-  color: #fff;
-  text-decoration: none;
-  -webkit-transition: color 0.6s;
 }
 
 /* Helpers */
@@ -485,7 +486,6 @@ a:active {
   top: 0;
   height: 100%;
   width: 100%;
-  display: table;
   pointer-events: none;
 }
 
@@ -581,6 +581,18 @@ a:active {
     margin-top: 3px;
     margin-bottom: 3px;
     width: 100%;
+  }
+
+  .blog .blog-item .blog-content {
+    padding: 20px 30px;
+  }
+
+  .blog-content h2 a {
+    font-size: 24px;
+  }
+
+  .blog-content .description {
+    font-size: 16px;
   }
 }
 @media only screen and (min-width: 768px) {
