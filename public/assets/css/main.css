@@ -164,7 +164,7 @@ canvas {
   line-height: 1.5em;
   font-family: 'Open Sans';
   font-weight: 400;
-  min-height: 400px;
+  min-height: 360px;
 }
 
 .blog .blog-item .blog-image {

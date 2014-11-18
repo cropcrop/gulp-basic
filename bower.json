@@ -22,6 +22,7 @@
     "bootstrap": "~3.3.1",
     "jquery.stellar": "~0.6.2",
     "particles": "https://github.com/VincentGarreau/particles.js/",
-    "isotope": "~2.0.1"
+    "isotope": "~2.0.1",
+    "imagesloaded": "~3.1.8"
   }
 }

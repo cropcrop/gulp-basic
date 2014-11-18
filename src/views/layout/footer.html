@@ -6,22 +6,144 @@
   <script src="bower_components/jquery.stellar/jquery.stellar.min.js"></script>
   <script src="bower_components/video.js/dist/video-js/video.js"></script>
   <script src="bower_components/isotope/dist/isotope.pkgd.min.js"></script>
+  <script src="bower_components/imagesloaded/imagesloaded.pkgd.min.js"></script>
   <script src="assets/js/main.js"></script>
 
 
 <script>
   
+  
 
-  $(window).load(function(){
-    $('.blog').isotope({
+  
+  
+  
+  
+$(window).load(function(){
+
+  var $container = $('.blog').imagesLoaded( function() {
+    $container.isotope({
       itemSelector: '.item',
       layoutMode: 'masonry',
       masonry: {
         columnWidth: '.item',
       }
     });
+    
+    
+    
+    $container.isotope( 'on', 'layoutComplete',
+      function( isoInstance, laidOutItems ) {
+        console.log( 'Isotope layout completed on ' +
+          laidOutItems.length + ' items' );
+      }
+    );
+
+
+
+    $('#add').on( 'click', function() {
+      console.log('clik');
+      var elems = [];
+      for ( var i = 0; i < 3; i++ ) {
+        var elem = $('.item:first-child');
+        elems.push( elem );
+      }
+      
+      var a = $('.item:first-child');
+      
+      
+      //$container.append(template).isotope('appended', template );
+      
+    });
+
+    
+    $.getJSON( "data.json", function( data ) {
+    
+    var items = [];
+               
+      $.each( data.entries , function( key, val ) {
+                
+        var title = val.title,
+            excerpt = val.excerpt,
+            url = val.url,
+            image = val.image,
+            date = val.date,
+            tags = val.tags;
+        
+        
+        var elems = [];
+      for ( var i = 0; i < 3; i++ ) {
+        var elem = $('.item:first-child');
+        elems.push( elem );
+      }
+      
+        
+    
+        function loadEntry(title, excerpt, url, image, date, tags){
+          
+          var taglist = "",
+              tagClasses = "";
+          
+          $.each(tags, function( index, value ) {
+            taglist += '<li class="' + value + '">' + value + '</li>';
+            tagClasses += ' ' + value;
+          });
+          
+          var template = $('<div class="col-md-4 col-sm-4 col-xs-12 item neuroscience consciousness ' + tagClasses  + '">' +
+        '<div class="blog-item animated fadeInUpBig">' +
+          '<div class="blog-header">' +
+            '<div class="blog-image">' +
+              '<div class="image" style=" background: url(\'' + image + '\') no-repeat center center"></div>' +
+            '</div>' +
+          '</div>' +
+          '<div class="blog-content">' +
+            '<h2><a href="' + url + '">' + title + '</a></h2>' +
+            '<p class="description">' + excerpt + '</p>' +
+            '<div class="row">' +
+              '<div class="col-md-4">' +
+                '<hr>' +
+              '</div>' +
+            '</div>' +
+            '<ul class="list list-inline list-tags">' +
+              taglist +
+            '</ul>' +
+            '<p class="date">' + date + '</p>' +
+          '</div>' +
+        '</div>' +
+      '</div>');
+          
+          return template;
+
+          
+          
+        }
+     
+        
+      var newEntry =  loadEntry(title, excerpt, url, image, date, tags);
+      $container.append(newEntry).isotope('appended', newEntry );
+      
+        items.push( "<li id='" + key + "'>" + val + "</li>" );
+        console.log( key, title, excerpt, image, date, tags );
+      });
+     
+
+      $( "<ul/>", {
+        "class": "my-new-list",
+        html: items.join( "" )
+      }).appendTo( "body" );
+    });
+    
+    
+    
+    
   });
+
   
+});
+  
+  
+  
+ 
+
   
   
   /*
