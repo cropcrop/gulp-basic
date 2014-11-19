@@ -88,7 +88,7 @@ $(function () {
     amountNewEntries = 3;
 
   var $doc = $(document),
-    $win = $(window);
+      $win = $(window);
 
   $doc.on('ready', function () {
 
@@ -328,6 +328,20 @@ jQuery(document).ready(function(){
     });
   });
 
+  
+  /* scroll load new entries */
+  
+  $(window).scroll(function(){
+    var scrollTop     = $(window).scrollTop(),
+    windowHeight = $(window).height(),
+    documentHeight = $(document).height(),
+    distanceBottom = documentHeight - windowHeight - scrollTop;
+
+    if(distanceBottom > 100){
+      queque += (queque > 0) ? 0 : amountNewEntries;
+      loadJson();
+    }
+  });
 
   /* load new item blog */
 
@@ -357,7 +371,7 @@ jQuery(document).ready(function(){
     }
 
 
-    var template = $('<div class="col-md-4 col-sm-4 col-xs-12 item neuroscience consciousness ' + tagClasses + '">' +
+    var template = $('<div class="col-md-4 col-sm-4 col-xs-12 item ' + tagClasses + '">' +
       '<div class="blog-item animated fadeInUpBig">' +
       '<div class="blog-header">' +
       '<div class="blog-image">' +
