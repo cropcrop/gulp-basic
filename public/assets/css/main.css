@@ -49,6 +49,10 @@ a:active {
 }
 
 /* Blog item */
+button {
+  pointer-events: all;
+}
+
 #filters li {
   pointer-events: all;
   cursor: pointer;

@@ -1,6 +1,4 @@
-@@include('./layout/header.html', {
-"title": "Luca Dimola - Folio"
-})
+@@include('./layout/header.html', { "title": "Luca Dimola - Folio" })
 
 
 <div class="full-wrapper">
@@ -26,22 +24,33 @@
                 </li>
                 <!--<li role="presentation" class="filter-blog" data-filter=".blog"><a href="#">blog</a></li>-->
                 <!--<li role="presentation" class="filter-portfolio" data-filter=".portfolio"><a href="#">portfolio</a></li>-->
-                <li role="presentation" class="filter-ted" data-filter=".ted"><a href="#">ted talks</a></li>
-                <li role="presentation" class="filter-neuroscience" data-filter=".neuroscience, .brain"><a href="#">neuroscience</a></li>
-                <li role="presentation" class="filter-math" data-filter=".math"><a href="#">math</a></li>
-                <li role="presentation" class="filter-physic" data-filter=".physic"><a href="#">physic</a></li>
-                <li role="presentation" class="filter-artificial-intelligence" data-filter=".artificial-intelligence"><a href="#">artificial intelligence</a></li>
+                <li role="presentation" class="filter-ted" data-filter=".ted"><a href="#">ted talks</a>
+                </li>
+                <li role="presentation" class="filter-neuroscience" data-filter=".neuroscience, .brain"><a href="#">neuroscience</a>
+                </li>
+                <li role="presentation" class="filter-math" data-filter=".math"><a href="#">math</a>
+                </li>
+                <li role="presentation" class="filter-physic" data-filter=".physic"><a href="#">physic</a>
+                </li>
+                <li role="presentation" class="filter-artificial-intelligence" data-filter=".artificial-intelligence"><a href="#">artificial intelligence</a>
+                </li>
                 <!--<li role="presentation" class="filter-design" data-filter=".design"><a href="#">design</a></li>-->
               </ul>
             </div>
           </div>
 
-          
+
           <!-- blog starts -->
-          
-          <div class="row blog hidden"></div>
-          
-              
+
+          <div id="blog" class="row blog hidden"></div>
+
+          <div class="row text-center">
+            <div class="col-md-12">
+              <button class="btn btn-default" data-action="more">load</button>
+            </div>
+          </div>
+
+
           <p class="footer-text text-center">
             &copy; 2014 Luca Dimola, all rights reserved
           </p>
