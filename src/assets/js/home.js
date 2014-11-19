@@ -1,4 +1,6 @@
 (function ($) {
+  
+  $('[data-role="preload-entries"]').hide();
 
   var loaded = 0,
     queque = 6,
@@ -79,14 +81,18 @@
   function loadJson() {
 
     console.log('loadjson');
+    
+    
+    var jqxhr = $.getJSON( "data.json", function(data) {
+      
+      $('[data-role="preload-entries"]').show();
 
-    $.getJSON("data.json", function (data) {
-
-
-
-
+    })
+    .done(function(data) {
+      
+      $('[data-role="preload-entries"]').hide();
+      
       $.each(data.entries, function (key, val, count) {
-
 
         if (queque > 0 && key > loaded && key < loaded + amountNewEntries) {
 
@@ -106,13 +112,15 @@
           queque--;
         }
 
-
-
-
         /* //debug 
             console.log( key, title, excerpt, image, date, tags ); */
       });
-    });
+      
+    })
+    .fail(function() {
+      console.log( "error json" );
+  });
+
 
   }
 
@@ -254,8 +262,8 @@ jQuery(document).ready(function(){
     windowHeight = $(window).height(),
     documentHeight = $(document).height(),
     distanceBottom = documentHeight - windowHeight - scrollTop;
-
-    if(distanceBottom > 100){
+    
+    if(distanceBottom < 200){
       queque += (queque > 0) ? 0 : amountNewEntries;
       loadJson();
     }

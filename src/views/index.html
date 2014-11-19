@@ -23,10 +23,10 @@
                 <li role="presentation" class="filter-all active" data-filter="*"><a href="#">all</a>
                 </li>
                 <!--<li role="presentation" class="filter-blog" data-filter=".blog"><a href="#">blog</a></li>-->
-                <!--<li role="presentation" class="filter-portfolio" data-filter=".portfolio"><a href="#">portfolio</a></li>-->
+                <li role="presentation" class="filter-portfolio" data-filter=".portfolio"><a href="#">portfolio</a></li>
                 <li role="presentation" class="filter-ted" data-filter=".ted"><a href="#">ted talks</a>
                 </li>
-                <li role="presentation" class="filter-neuroscience" data-filter=".neuroscience"><a href="#">neuroscience</a>
+                <li role="presentation" class="filter-neuroscience" data-filter=".neuroscience, .brain"><a href="#">neuroscience</a>
                 </li>
                 <li role="presentation" class="filter-math" data-filter=".math"><a href="#">math</a>
                 </li>
@@ -44,12 +44,14 @@
 
           <div id="blog" class="row blog hidden"></div>
 
-          <div class="row text-center">
-            <div class="col-md-12">
-              <button class="btn btn-default" data-action="more">load</button>
-            </div>
+          
+          <div class="container-fluid">
+          <div class="preload-juggle animated fadeInUp" data-role="preload-entries">
+            <div class="ball"></div>
+            <div class="ball"></div>
+            <div class="ball"></div>
           </div>
-
+          </div>
 
           <p class="footer-text text-center">
             &copy; 2014 Luca Dimola, all rights reserved
