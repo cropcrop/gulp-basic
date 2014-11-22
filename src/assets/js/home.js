@@ -71,6 +71,8 @@
       console.log('isotope2');
       next();
     });
+    
+    $('.container-full').removeClass('hidden');
 
 
   });
@@ -298,7 +300,7 @@ jQuery(document).ready(function(){
 
 
     var template = $('<div class="col-md-4 col-sm-4 col-xs-12 item ' + tagClasses + '">' +
-      '<div class="blog-item animated fadeInUpBig">' +
+      '<div class="blog-item animated fadeInUp">' +
       '<div class="blog-header">' +
       '<div class="blog-image">' +
       preview +

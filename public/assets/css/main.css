@@ -11,7 +11,7 @@
 
 body,
 html {
-  background: #111;
+  background: #0F1215;
   margin: 0;
   color: #fff;
   height: 100%;
@@ -44,7 +44,9 @@ a:active {
 
 .background-particle {
   height: 100%;
-  background: #111;
+  background: #0F1215;
+  -webkit-background-size: cover;
+  background-position: center center;
   position: relative;
 }
 
@@ -386,6 +388,21 @@ button {
   word-spacing: 0.01em;
 }
 
+.delay-sm {
+  -webkit-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+}
+
+.delay-md {
+  -webkit-animation-delay: 0.8s;
+  animation-delay: 0.8s;
+}
+
+.delay-lg {
+  -webkit-animation-delay: 1.2s;
+  animation-delay: 1.2s;
+}
+
 /* Overwrite */
 .well {
   border: 0;
@@ -585,10 +602,25 @@ button {
     margin-top: 3px;
     margin-bottom: 3px;
     width: 100%;
+    text-align: center;
   }
 
   .blog .blog-item .blog-content {
     padding: 20px 30px;
+  }
+
+  .blog .blog-item {
+    margin-bottom: 15px;
+  }
+
+  .container-full h1 {
+    font-size: 2.8em;
+    text-align: center;
+  }
+
+  .container-full h2.description {
+    font-size: 2.1em;
+    text-align: center;
   }
 
   .blog-content h2 a {
@@ -597,6 +629,14 @@ button {
 
   .blog-content .description {
     font-size: 16px;
+  }
+
+  .container-full .bottom-xl {
+    padding-bottom: 35px;
+  }
+
+  .container-full .top-xl {
+    padding-top: 35px;
   }
 }
 @media only screen and (min-width: 768px) {
