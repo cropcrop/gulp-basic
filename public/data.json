@@ -46,50 +46,17 @@
       "tags": ["robotics", "math", "artificial-intelligence"]
     },
     {
-      "type": "post",
-      "title": "Henry Markram: A brain in a supercomputer",
-      "excerpt": "Henry Markram says the mysteries of the mind can be solved — soon. Mental illness, memory, perception: they're made of neurons and electric signals, and he plans to find them with a supercomputer that models all the brain's 100,000,000,000,000 synapses.",
-      "url": "http://www.ted.com/talks/henry_markram_supercomputing_the_brain_s_secrets?language=en",
-      "image": "http://img.tedcdn.com/r/images.ted.com/images/ted/121608_800x600.jpg?ll=1&amp;quality=89&amp;w=800",
-      "date": "Jul 2009",
-      "tags": ["neuroscience", "consciousness", "artificial-intelligence", "physic"]
+      "type": "experiment",
+      "experimentClass": "image-experiment-default",
+      "customContent" : "<p>test</p>",
+      "title": "jQuery Plugin: switchStyler",
+      "excerpt": "Add/Remove css classes when something fixed is hovering your target div(s).",
+      "url": "http://honesign.com/jquery-switchstyler/demo/",
+      "image": "./assets/img/portfolio/switchstyler.gif",
+      "date": "1 Sep 2014",
+      "tags": ["portfolio", "experiment"]
     },
-    {
-      "type": "post",
-      "title": "Antonio Damasio: The quest to understand consciousness",
-      "excerpt": "Every morning we wake up and regain consciousness — that is a marvelous fact — but what exactly is it that we regain? Neuroscientist Antonio Damasio uses this simple question to give us a glimpse into how our brains create our sense of self.",
-      "url": "http://www.ted.com/talks/antonio_damasio_the_quest_to_understand_consciousness",
-      "image": "http://img.tedcdn.com/r/images.ted.com/images/ted/483f84a4cd490b8a4ed1331c489ac04e09bf61b4_800x600.jpg?ll=1&quality=89&w=800",
-      "date": "Mar 2011",
-      "tags": ["ted", "neuroscience", "consciousness"]
-    },
-    {
-      "type": "post",
-      "title": "Russel Foster:Why do we sleep?",
-      "excerpt": "Russell Foster is a circadian neuroscientist: He studies the sleep cycles of the brain. And he asks: What do we know about sleep?",
-      "url": "http://www.ted.com/talks/russell_foster_why_do_we_sleep",
-      "image": "http://img.tedcdn.com/r/images.ted.com/images/ted/2ac8175dc675cf1a76ec10402f3409a251d3e177_1600x1200.jpg?ll=1&quality=89&w=800",
-      "date": "Jun 2013",
-      "tags": ["ted", "neuroscience"]
-    },
-    {
-      "type": "post",
-      "title": "Daniel Wolpert: The real reason for brains",
-      "excerpt": "Neuroscientist Daniel Wolpert starts from a surprising premise: the brain evolved, not to think or feel, but to control movement.",
-      "url": "http://www.ted.com/talks/daniel_wolpert_the_real_reason_for_brains",
-      "image": "http://img.tedcdn.com/r/images.ted.com/images/ted/794a93b76d7c657c2eb52e229c4b20e583615e06_1600x1200.jpg?ll=1&quality=89&w=800",
-      "date": "Jul 2011",
-      "tags": ["ted", "neuroscience"]
-    },
-    {
-      "type": "post",
-      "title": "Daniel Dennet: The illusion of consciousness",
-      "excerpt": "Philosopher Dan Dennett makes a compelling argument that not only don't we understand our own consciousness, but that half the time our brains are actively fooling us.",
-      "url": "http://www.ted.com/talks/dan_dennett_on_our_consciousness",
-      "image": "http://img.tedcdn.com/r/images.ted.com/images/ted/55f8352def783a2b3a7f0b8b135a82ac5ae0b2de_1600x1200.jpg?ll=1&quality=89&w=800",
-      "date": "Feb 2003",
-      "tags": ["ted", "neuroscience"]
-    },
+    
     {
       "type": "experiment",
       "experimentClass": "image-experiment0",
@@ -97,18 +64,17 @@
       "excerpt": "juggling-inspired preloader using css3 animation.",
       "url": "http://www.ted.com/talks/daniel_wolpert_the_real_reason_for_brains",
       "image": "./assets/img/portfolio/juggling.gif",
-      "date": "Dec 2013",
+      "date": "1 Dec 2013",
       "tags": ["portfolio", "experiment"]
     },
     {
-      "type": "experiment",
-      "experimentClass": "image-experiment-default",
-      "title": "jQuery Plugin: switchStyler",
-      "excerpt": "Add/Remove css classes when something fixed is hovering your target div(s).",
-      "url": "http://honesign.com/jquery-switchstyler/demo/",
-      "image": "./assets/img/portfolio/switchstyler.gif",
-      "date": "Sep 2014",
-      "tags": ["portfolio", "experiment"]
+      "type": "post",
+      "title": "Russel Foster:Why do we sleep?",
+      "excerpt": "Russell Foster is a circadian neuroscientist: He studies the sleep cycles of the brain. And he asks: What do we know about sleep?",
+      "url": "http://www.ted.com/talks/russell_foster_why_do_we_sleep",
+      "image": "http://img.tedcdn.com/r/images.ted.com/images/ted/2ac8175dc675cf1a76ec10402f3409a251d3e177_1600x1200.jpg?ll=1&quality=89&w=800",
+      "date": "1 Jun 2013",
+      "tags": ["ted", "neuroscience"]
     },
     {
       "type": "post",
@@ -116,8 +82,62 @@
       "excerpt": "This is the peacock spider Maratus volans. Jürgen Otto was the first to film this spider's mating dance.",
       "url": "https://www.youtube.com/watch?v=d_yYC5r8xMI",
       "image": "http://i.ytimg.com/vi/d_yYC5r8xMI/0.jpg",
-      "date": "Mar 2013",
+      "date": "1 Mar 2013",
       "tags": ["youtube", "evolution"]
+    },
+    {
+      "type": "post",
+      "title": "Daniel Wolpert: The real reason for brains",
+      "excerpt": "Neuroscientist Daniel Wolpert starts from a surprising premise: the brain evolved, not to think or feel, but to control movement.",
+      "url": "http://www.ted.com/talks/daniel_wolpert_the_real_reason_for_brains",
+      "image": "http://img.tedcdn.com/r/images.ted.com/images/ted/794a93b76d7c657c2eb52e229c4b20e583615e06_1600x1200.jpg?ll=1&quality=89&w=800",
+      "date": "1 Jul 2011",
+      "tags": ["ted", "neuroscience"]
+    },
+    {
+      "type": "post",
+      "title": "Antonio Damasio: The quest to understand consciousness",
+      "excerpt": "Every morning we wake up and regain consciousness — that is a marvelous fact — but what exactly is it that we regain? Neuroscientist Antonio Damasio uses this simple question to give us a glimpse into how our brains create our sense of self.",
+      "url": "http://www.ted.com/talks/antonio_damasio_the_quest_to_understand_consciousness",
+      "image": "http://img.tedcdn.com/r/images.ted.com/images/ted/483f84a4cd490b8a4ed1331c489ac04e09bf61b4_800x600.jpg?ll=1&quality=89&w=800",
+      "date": "1 Mar 2011",
+      "tags": ["ted", "neuroscience", "consciousness"]
+    },
+    {
+      "type": "post",
+      "title": "Henry Markram: A brain in a supercomputer",
+      "excerpt": "Henry Markram says the mysteries of the mind can be solved — soon. Mental illness, memory, perception: they're made of neurons and electric signals, and he plans to find them with a supercomputer that models all the brain's 100,000,000,000,000 synapses.",
+      "url": "http://www.ted.com/talks/henry_markram_supercomputing_the_brain_s_secrets?language=en",
+      "image": "http://img.tedcdn.com/r/images.ted.com/images/ted/121608_800x600.jpg?ll=1&amp;quality=89&amp;w=800",
+      "date": "1 Jul 2009",
+      "tags": ["neuroscience", "consciousness", "artificial-intelligence", "physic"]
+    },
+    {
+      "type": "post",
+      "title": "Oliver Sacks: What hallucination reveals about our minds",
+      "excerpt": "Neurologist and author Oliver Sacks brings our attention to Charles Bonnet syndrome — when visually impaired people experience lucid hallucinations. He describes the experiences of his patients in heartwarming detail and walks us through the biology of this under-reported phenomenon.",
+      "url": "http://www.ted.com/talks/oliver_sacks_what_hallucination_reveals_about_our_minds",
+      "image": "http://img.tedcdn.com/r/images.ted.com/images/ted/2e85fe93b6c3d312f9f8394642745cd4db5da215_1600x1200.jpg?ll=1&quality=89&w=800",
+      "date": "1 Feb 2009",
+      "tags": ["ted", "neuroscience", "consciousness"]
+    },
+    {
+      "type": "post",
+      "title": "Frans Lanting: The story of life in photographs",
+      "excerpt": "In this stunning slideshow, celebrated nature photographer Frans Lanting presents The LIFE Project, a poetic collection of photographs that tell the story of our planet, from its eruptive beginnings to its present diversity.",
+      "url": "http://www.ted.com/talks/frans_lanting_s_lyrical_nature_photos",
+      "image": "http://img.tedcdn.com/r/images.ted.com/images/ted/381_480x360.jpg?ll=1&quality=89&w=800",
+      "date": "1 Feb 2005",
+      "tags": ["ted", "evolution"]
+    },
+    {
+      "type": "post",
+      "title": "Daniel Dennet: The illusion of consciousness",
+      "excerpt": "Philosopher Dan Dennett makes a compelling argument that not only don't we understand our own consciousness, but that half the time our brains are actively fooling us.",
+      "url": "http://www.ted.com/talks/dan_dennett_on_our_consciousness",
+      "image": "http://img.tedcdn.com/r/images.ted.com/images/ted/55f8352def783a2b3a7f0b8b135a82ac5ae0b2de_1600x1200.jpg?ll=1&quality=89&w=800",
+      "date": "1 Feb 2003",
+      "tags": ["ted", "neuroscience"]
     }
   ]
 }

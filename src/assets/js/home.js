@@ -18,6 +18,12 @@
         layoutMode: 'masonry',
         masonry: {
           columnWidth: '.item',
+        },
+        getSortData: {
+          date: function ($elem) {
+            console.log('asd', $($elem).find('.date').text() );
+            return Date.parse($($elem).find('.date').text());
+          }
         }
       });
 
@@ -106,8 +112,9 @@
             date = val.date,
             tags = val.tags,
             experimentClass = val.experimentClass;
+            customContent = val.customContent;
 
-          var newEntry = loadEntry(type, experimentClass, title, excerpt, url, image, date, tags);
+          var newEntry = loadEntry(type, experimentClass, customContent, title, excerpt, url, image, date, tags);
           containerBlog.append(newEntry).isotope('appended', newEntry);
 
           loaded++;
@@ -117,6 +124,8 @@
         /* //debug 
             console.log( key, title, excerpt, image, date, tags ); */
       });
+      
+      /* $('#blog').isotope({ sortBy: 'date', sortAscending : false}); */
       
     })
     .fail(function() {
@@ -238,20 +247,26 @@ jQuery(document).ready(function(){
     separator: "-",
     speed: 2600
   });
-
+  
+  
+  /* zoom open entry experiment */
+  $('#blog').on('click', '.blog-btn', function (event) {
+    $(this).parents('.item').toggleClass('active');
+    $('.fullscreen-overlay').toggleClass('').toggleClass('fadeOut fadeIn');
+    $($($(this).parents('.item')[0]).find('.customContent')).toggleClass('hidden');
+    console.log($(this));
+  });
 
   /* filters */
 
   $('#filters').on('click', 'li', function (event) {
     event.preventDefault();
 
-    console.log('asd')
-
     $('#filters > li').removeClass('active');
     $(this).addClass('active');
 
     var filterValue = $(this).attr('data-filter');
-    $('.blog').isotope({
+    $('#blog').isotope({
       filter: filterValue
     });
   });
@@ -273,11 +288,13 @@ jQuery(document).ready(function(){
 
   /* load new item blog */
 
-  function loadEntry(type, experimentClass, title, excerpt, url, image, date, tags) {
+  function loadEntry(type, experimentClass, customContent, title, excerpt, url, image, date, tags) {
 
     var taglist = "",
       tagClasses = "",
       tagFilters = "",
+      customContentIcon = "",
+      customContentHtml = "",
       preview;
 
     $.each(tags, function (index, value) {
@@ -297,6 +314,11 @@ jQuery(document).ready(function(){
     } else if (type == 'experiment') {
       preview = '<div class="blog-image"><div class="' + experimentClass + '"><img src="' + image + '" width="100"></div></div>';
     }
+    
+    if(customContent){
+      customContentIcon = '<a href="#!" class="btn blog-btn"><i class="fa fa-angle-right"></i></a>';
+      customContentHtml = customContent;
+    }
 
 
     var template = $('<div class="col-md-4 col-sm-4 col-xs-12 item ' + tagClasses + '">' +
@@ -305,11 +327,12 @@ jQuery(document).ready(function(){
       '<div class="blog-image">' +
       preview +
       '</div>' +
-      '<!--<div class="btn blog-btn"><i class="fa fa-external-link-square"></i></div>-->' +
+      customContentIcon + 
       '</div>' +
       '<div class="blog-content">' +
       '<h2><a href="' + url + '">' + title + '</a></h2>' +
       '<p class="description">' + excerpt + '</p>' +
+      '<div clasS="customContent animated fadeIn hidden">' + customContentHtml + '</div>' +
       '<div class="row">' +
       '<div class="col-md-4">' +
       '<hr>' +
